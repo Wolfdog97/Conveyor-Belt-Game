@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scene_LongBeltSushi_Turner_Test.unity
+    guid: 36b09f498c0884c5a962b9fc985d3083
