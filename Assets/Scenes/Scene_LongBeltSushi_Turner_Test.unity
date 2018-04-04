@@ -143,7 +143,7 @@ Transform:
   - {fileID: 1789948715}
   - {fileID: 1403839114}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &197480657
 GameObject:
@@ -238,15 +238,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.35
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8800001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.88
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -266,11 +266,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1412409934227190, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_Name
-      value: Sushi (3)
+      value: SushiOrange
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
@@ -352,6 +352,34 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!1 &304372023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 304372024}
+  m_Layer: 0
+  m_Name: SushiSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &304372024
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304372023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.054926, y: 0.146608, z: 4.904017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375655079
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +463,7 @@ Transform:
   m_LocalScale: {x: 7.104805, y: 0.2488255, z: 10.329144}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &375655084
 Rigidbody:
@@ -588,15 +616,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.7
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8800001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.192
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -617,6 +645,10 @@ Prefab:
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412409934227190, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
+      propertyPath: m_Name
+      value: SushiGreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
@@ -735,7 +767,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259617019053044, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1776838771963958, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_Name
@@ -753,15 +785,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.11
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8800001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.192
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -785,7 +817,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1412409934227190, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_Name
-      value: Sushi (2)
+      value: SushiBlue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
@@ -956,7 +988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259617019053044, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1776838771963958, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_Name
@@ -1110,15 +1142,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8800001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.192
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4471233770609060, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1142,7 +1174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1412409934227190, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
       propertyPath: m_Name
-      value: Sushi (1)
+      value: SushiRed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9441a0844bd264981a185f95628fdb7b, type: 2}
@@ -1345,7 +1377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259617019053044, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1776838771963958, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_Name
@@ -1547,7 +1579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4259617019053044, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1776838771963958, guid: 22a8be7ed9f0149daba17c70f4ec8bf7, type: 2}
       propertyPath: m_Name
