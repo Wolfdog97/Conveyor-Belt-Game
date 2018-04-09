@@ -713,12 +713,12 @@ PlayerSettings:
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 0
+    UNet: 1
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: b65db140-287f-4c1b-a002-276719547c3f
-  projectName: 
+  projectName: Sushi_Jam_Live
   organizationId: 62tromey3
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
