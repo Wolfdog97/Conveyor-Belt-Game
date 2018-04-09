@@ -14,13 +14,4 @@ public class Food : MonoBehaviour {
 
     public FoodType foodType;
 
-
-    private void Start()
-    {
-        print("kajhsgfkjasbghjkadsbghjabgsk");
-    }
-    private void Update()
-    {
-        print("kajhsgfkjasbghjkadsbghjabgsk");
-    }
 }
