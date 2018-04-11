@@ -48,6 +48,8 @@ public class PlateScript : MonoBehaviour {
 
                 platedSushi.Remove(otherFood);
 
+                other.transform.SetParent(null);
+
                 //Debug.Log("Current hashset Count: " + platedSushi.Count);
 
             }
