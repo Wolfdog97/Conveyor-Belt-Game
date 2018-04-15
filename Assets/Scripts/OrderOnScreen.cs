@@ -7,10 +7,11 @@ public class OrderOnScreen : MonoBehaviour {
 	public float timer;
 	public GameObject[] orders;
 	int index;
+	float timerStart;
 
 	// Use this for initialization
 	void Start () {
-
+		timerStart = timer;
 	}
 
 	// Update is called once per frame
@@ -22,6 +23,9 @@ public class OrderOnScreen : MonoBehaviour {
 		{
 			index = Random.Range(0,orders.Length);
 			Instantiate (orders[index]);
+			timer = timerStart;
 		}
+
+
 	}
 }
