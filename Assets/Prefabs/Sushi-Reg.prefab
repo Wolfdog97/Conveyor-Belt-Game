@@ -38,7 +38,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4145819644455620}
   - component: {fileID: 33752425498531966}
-  - component: {fileID: 65613885631210748}
   - component: {fileID: 23478782341388680}
   m_Layer: 0
   m_Name: cucumber (1)
@@ -56,7 +55,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4384677442725724}
   - component: {fileID: 33533913179286510}
-  - component: {fileID: 65755320539894826}
   - component: {fileID: 23339173779420004}
   m_Layer: 0
   m_Name: Sushi-rice
@@ -119,8 +117,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1594796543155274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77543443, y: 1.32, z: 0.8312409}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -6.5804777, y: -5.061473, z: 5.7572274}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_Children:
   - {fileID: 4648564590438006}
   - {fileID: 4384677442725724}
@@ -291,30 +289,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6841874, y: 0.6102598, z: 0.64784944}
   m_Center: {x: -0.08615792, y: -0.19487023, z: 0.048330426}
---- !u!65 &65613885631210748
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183442787263830}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65755320539894826
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417324965880920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95133127412573860
 Animator:
   serializedVersion: 3
