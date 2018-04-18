@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4895289638110358}
   - component: {fileID: 65136502602987714}
-  - component: {fileID: 114705315375308660}
+  - component: {fileID: 114658938353010548}
   m_Layer: 0
   m_Name: BeltDespawn
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,8 +35,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277652629835670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 0.8, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.21, y: -1.0980949, z: 0.67999995}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999978}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,7 +53,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9699209, y: 0.43028855, z: 1.0004377}
   m_Center: {x: 0.012227178, y: 0.086916804, z: -0.00021886826}
---- !u!114 &114705315375308660
+--- !u!114 &114658938353010548
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -61,6 +61,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277652629835670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb15150fcb7464853a2cc32d324e573c, type: 3}
+  m_Script: {fileID: 11500000, guid: c29b93e9b5b70474a846173b82a17a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
