@@ -7,9 +7,7 @@ public class OrderOutScript : MonoBehaviour {
     PlateScript _plateScript;
 
     public List<Food> sushiList = new List<Food>();
-
-    //temporary
-    private List<Food.FoodType> tempRecipe = new List<Food.FoodType>() { Food.FoodType.Salmon, Food.FoodType.Shrimp, Food.FoodType.Tuna, Food.FoodType.YellowTail };
+    public OrderGeneration orderGenerator;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,22 +16,23 @@ public class OrderOutScript : MonoBehaviour {
             Debug.Log("This appears to be a Plate!");
             _plateScript = other.GetComponent<PlateScript>();
 
-            Debug.Log("!!!!!!: " + _plateScript.platedSushi.Count);
+           // Debug.Log("!!!!!!: " + _plateScript.platedSushi.Count);
 
             // Iterate through hashset and add each element to the list
             List<Food.FoodType> plateFoodTypes = ConvertHashSetToList(_plateScript.platedSushi);
 
             // run CompareList()
-            bool matchingPlate = CompareList(plateFoodTypes, tempRecipe);
-
-            if(matchingPlate)
-            {
-                Debug.Log("correct plate!");
+            bool matchingPlate = false;
+            foreach (List<Food.FoodType> order in orderGenerator.currentOrders) {
+                matchingPlate = CompareList(plateFoodTypes, order);
+                if (matchingPlate)
+                {
+                    orderGenerator.currentOrders.Remove(order);
+                    Debug.Log("matches an order!");
+                    break;
+                }
             }
-            else
-            {
-                Debug.Log("mistake!");
-            }
+            if (!matchingPlate) Debug.Log("doesn't match an order");
         }
 
     }

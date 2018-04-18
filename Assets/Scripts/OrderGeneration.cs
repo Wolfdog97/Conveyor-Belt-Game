@@ -4,15 +4,57 @@ using UnityEngine;
 
 public class OrderGeneration : MonoBehaviour {
 
-    
+    ShuffleBag<Food.FoodType> randomBag = 
+        new ShuffleBag<Food.FoodType>(new Food.FoodType[]{Food.FoodType.Salmon, Food.FoodType.Shrimp, Food.FoodType.Tuna, Food.FoodType.YellowTail});
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+    public List<List<Food.FoodType>> currentOrders;
+    public int orderSize;
+    private float orderTimer;
+    public float timeBetweenOrders;
+    public int maxOrders;
+
+    private void Start()
+    {
+        currentOrders = new List<List<Food.FoodType>>();
+        AddNewOrder();
+    }
+
+    private void Update()
+    {
+        if (currentOrders.Count < maxOrders)
+        {
+            orderTimer += Time.deltaTime;
+            if (orderTimer >= timeBetweenOrders)
+            {
+                orderTimer = 0;
+                AddNewOrder();
+            }
+        }
+    }
+
+    private void AddNewOrder()
+    {
+        List<Food.FoodType> newOrder = CreateOrder(orderSize);
+        currentOrders.Add(newOrder);
+        Debug.Log("adding new order:");
+        foreach (Food.FoodType foodType in newOrder)
+        {
+            Debug.Log(foodType);
+        }
+    }
+
+    public List<Food.FoodType> CreateOrder(int orderSize)
+    {
+        List<Food.FoodType> order = new List<Food.FoodType>();
+        for (int i = 0; i < orderSize; i++)
+        {
+            order.Add(randomBag.Next());
+        }
+        return order;
+    }
+
+
+} 
+
+
+// Need this script to create a new public list of type FoodType for the OrderOutScript to check against
