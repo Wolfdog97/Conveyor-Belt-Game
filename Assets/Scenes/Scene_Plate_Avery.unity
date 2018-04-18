@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sushiList: []
+  orderGenerator: {fileID: 1107349972}
 --- !u!1 &364048495
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +335,7 @@ GameObject:
   - component: {fileID: 533624055}
   - component: {fileID: 533624054}
   m_Layer: 0
-  m_Name: Test_Food (3)
+  m_Name: YellowTail_test
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +454,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5846726a3729fe54e8697b18e3a2d499, type: 2}
+  - {fileID: 2100000, guid: 8712c276e592c504aaf6e3c66c1d7ea3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -522,7 +523,7 @@ GameObject:
   - component: {fileID: 554901510}
   - component: {fileID: 554901509}
   m_Layer: 0
-  m_Name: Test_Food (1)
+  m_Name: Tuna_test
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +642,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5846726a3729fe54e8697b18e3a2d499, type: 2}
+  - {fileID: 2100000, guid: a06aaa52e20c8b7428dba1e693f0f809, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -883,6 +884,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10b78430333a6f45baf4c8d04af7c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1107349971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1107349973}
+  - component: {fileID: 1107349972}
+  m_Layer: 0
+  m_Name: Orders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1107349972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107349971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580989d1148211447ae98751bdc50b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderSize: 3
+  timeBetweenOrders: 2
+  maxOrders: 1
+--- !u!4 &1107349973
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107349971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206192058
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +1028,7 @@ GameObject:
   - component: {fileID: 1336976584}
   - component: {fileID: 1336976583}
   m_Layer: 0
-  m_Name: Test_Food
+  m_Name: Salmon_test
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,7 +1695,7 @@ GameObject:
   - component: {fileID: 2069310494}
   - component: {fileID: 2069310493}
   m_Layer: 0
-  m_Name: Test_Food (2)
+  m_Name: Shrimp_test
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1770,7 +1814,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5846726a3729fe54e8697b18e3a2d499, type: 2}
+  - {fileID: 2100000, guid: ff2986fbad9084abdbce1289ab71f620, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
