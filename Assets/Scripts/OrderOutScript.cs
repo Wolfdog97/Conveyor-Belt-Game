@@ -8,6 +8,7 @@ public class OrderOutScript : MonoBehaviour {
 
     public List<Food> sushiList = new List<Food>();
     public OrderGeneration orderGenerator;
+    public bool matchingPlate;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +23,8 @@ public class OrderOutScript : MonoBehaviour {
             List<Food.FoodType> plateFoodTypes = ConvertHashSetToList(_plateScript.platedSushi);
 
             // run CompareList()
-            bool matchingPlate = false;
+            matchingPlate = false;
+
             foreach (List<Food.FoodType> order in orderGenerator.currentOrders) {
                 matchingPlate = CompareList(plateFoodTypes, order);
                 if (matchingPlate)
@@ -34,7 +36,6 @@ public class OrderOutScript : MonoBehaviour {
             }
             if (!matchingPlate) Debug.Log("doesn't match an order");
         }
-
     }
 
     private List<Food.FoodType> ConvertHashSetToList(HashSet<Food> hashSet)
