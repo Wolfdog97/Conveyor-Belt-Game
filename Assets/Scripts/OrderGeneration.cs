@@ -12,6 +12,7 @@ public class OrderGeneration : MonoBehaviour {
     private float orderTimer;
     public float timeBetweenOrders;
     public int maxOrders;
+	public TextMesh[] orders;
 
     private void Start()
     {
@@ -41,6 +42,10 @@ public class OrderGeneration : MonoBehaviour {
         {
             Debug.Log(foodType);
         }
+
+		for (int i = 0; i < newOrder.Count; ++i) {
+			orders [i].text = newOrder [i].ToString ();
+		}
     }
 
     public List<Food.FoodType> CreateOrder(int orderSize)
