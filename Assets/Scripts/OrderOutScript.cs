@@ -8,7 +8,6 @@ public class OrderOutScript : MonoBehaviour {
 
     public List<Food> sushiList = new List<Food>();
     public OrderGeneration orderGenerator;
-    public bool matchingPlate;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,18 +22,11 @@ public class OrderOutScript : MonoBehaviour {
             List<Food.FoodType> plateFoodTypes = ConvertHashSetToList(_plateScript.platedSushi);
 
             // run CompareList()
-            matchingPlate = false;
+            List<Food.FoodType> matchingOrder = orderGenerator.GetOrder(plateFoodTypes);
 
-            foreach (List<Food.FoodType> order in orderGenerator.currentOrders) {
-                matchingPlate = CompareList(plateFoodTypes, order);
-                if (matchingPlate)
-                {
-                    orderGenerator.currentOrders.Remove(order);
-                    Debug.Log("matches an order!");
-                    break;
-                }
-            }
-            if (!matchingPlate) Debug.Log("doesn't match an order");
+
+            if (matchingOrder == null) Debug.Log("doesn't match an order");
+            else orderGenerator.RemoveOrder(matchingOrder);
         }
     }
 
@@ -49,11 +41,13 @@ public class OrderOutScript : MonoBehaviour {
         return foodTypeList;
     }
 
-    private bool CompareList (List<Food.FoodType> a, List<Food.FoodType> b)
+    public static bool CompareList (List<Food.FoodType> a, List<Food.FoodType> b)
     {
         // Iterate through list a and list b
         // Check if they contain the same elements
         // return true if they match 
+        if (a == null || b == null) return false;
+
         foreach(Food.FoodType type in a)
         {
             if (!b.Contains(type)) return false;
