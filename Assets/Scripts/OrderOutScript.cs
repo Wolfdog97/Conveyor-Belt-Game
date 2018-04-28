@@ -22,19 +22,12 @@ public class OrderOutScript : MonoBehaviour {
             List<Food.FoodType> plateFoodTypes = ConvertHashSetToList(_plateScript.platedSushi);
 
             // run CompareList()
-            bool matchingPlate = false;
-            foreach (List<Food.FoodType> order in orderGenerator.currentOrders) {
-                matchingPlate = CompareList(plateFoodTypes, order);
-                if (matchingPlate)
-                {
-                    orderGenerator.currentOrders.Remove(order);
-                    Debug.Log("matches an order!");
-                    break;
-                }
-            }
-            if (!matchingPlate) Debug.Log("doesn't match an order");
-        }
+            List<Food.FoodType> matchingOrder = orderGenerator.GetOrder(plateFoodTypes);
 
+
+            if (matchingOrder == null) Debug.Log("doesn't match an order");
+            else orderGenerator.RemoveOrder(matchingOrder);
+        }
     }
 
     private List<Food.FoodType> ConvertHashSetToList(HashSet<Food> hashSet)
@@ -48,11 +41,13 @@ public class OrderOutScript : MonoBehaviour {
         return foodTypeList;
     }
 
-    private bool CompareList (List<Food.FoodType> a, List<Food.FoodType> b)
+    public static bool CompareList (List<Food.FoodType> a, List<Food.FoodType> b)
     {
         // Iterate through list a and list b
         // Check if they contain the same elements
         // return true if they match 
+        if (a == null || b == null) return false;
+
         foreach(Food.FoodType type in a)
         {
             if (!b.Contains(type)) return false;
