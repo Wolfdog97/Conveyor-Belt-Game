@@ -1055,6 +1055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580989d1148211447ae98751bdc50b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodSprites: []
+  orderdisplayControllers: []
   orderSize: 3
   timeBetweenOrders: 2
   maxOrders: 1
