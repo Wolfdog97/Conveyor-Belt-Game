@@ -50,6 +50,12 @@ public class OrderGeneration : MonoBehaviour {
         {
             Debug.Log(foodType);
         }
+
+        for (int i = 0; i < newOrder.Count; ++i)
+        {
+            orders[i].text = newOrder[i].ToString();
+        }
+
         foreach (OrderDisplayController display in orderdisplayControllers)
         {
             if(display.orderDisplayed == null)
