@@ -28,6 +28,9 @@ namespace Valve.VR.InteractionSystem{
 		public float snapAttachEaseInTime = 0.15f;
 		public string[] attachEaseInAttachmentNames;
 
+		public GameObject[] plates;
+		private int plateIndex;
+
 		public Animator plateAnimator;
 
 		private VelocityEstimator velocityEstimator;
@@ -103,8 +106,18 @@ namespace Valve.VR.InteractionSystem{
 			//Trigger got pressed
 			if ( hand.GetStandardInteractionButtonDown() )
 			{
-				print ("interacted");
 				plateAnimator.SetTrigger ("plateCollision");
+
+				plateIndex = Random.Range (0,3);
+//				GameObject plateOnHand = Instantiate (plates[plateIndex]);
+				GameObject plateOnHand = Instantiate (plates[plateIndex],new Vector3(hand.transform.position.x,hand.transform.position.y,hand.transform.position.z), new Quaternion(0,0,0,0));
+//				hand.AttachObject (plateOnHand, Hand.AttachmentFlags.ParentToHand, attachmentPoint);
+//				hand.Attac
+
+				//go plate = Instantiate plate prefab code
+				//hand.attchObject(plate)
+
+			
 				//hand.AttachObject( gameObject, attachmentFlags, attachmentPoint );
 				ControllerButtonHints.HideButtonHint( hand, Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger );
 			}
