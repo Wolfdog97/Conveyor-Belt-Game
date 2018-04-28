@@ -6,7 +6,7 @@ public class OrderOutScript : MonoBehaviour {
 
     PlateScript _plateScript;
 
-    public List<Food> sushiList = new List<Food>();
+    //public List<Food> sushiList = new List<Food>();
     public OrderGeneration orderGenerator;
 
     private void OnTriggerEnter(Collider other)
