@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114570812273811156}
   - component: {fileID: 114450599734832276}
   - component: {fileID: 114661956068250440}
+  - component: {fileID: 64315119708312086}
   m_Layer: 0
   m_Name: plate-yellow
   m_TagString: Plate
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472032180575156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.24799997, z: 0}
+  m_LocalPosition: {x: -0.14688987, y: 0.806, z: -0.09319252}
   m_LocalScale: {x: 19.890255, y: 19.89026, z: 19.89026}
   m_Children:
   - {fileID: 4206625920899232}
@@ -134,6 +135,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64315119708312086
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472032180575156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 2eddf34006b704143b29da6f2acbfa8b, type: 3}
 --- !u!65 &65358354214623778
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -154,7 +169,7 @@ BoxCollider:
   m_GameObject: {fileID: 1472032180575156}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.017989244, y: 0.005478178, z: 0.018309921}
   m_Center: {x: -0.0002973414, y: 0, z: 0.00017009876}
