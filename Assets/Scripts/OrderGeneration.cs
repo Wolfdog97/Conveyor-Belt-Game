@@ -8,10 +8,18 @@ public class OrderGeneration : MonoBehaviour {
         new ShuffleBag<Food.FoodType>(new Food.FoodType[]{Food.FoodType.Salmon, Food.FoodType.Shrimp, Food.FoodType.Tuna, Food.FoodType.YellowTail});
 
     public List<List<Food.FoodType>> currentOrders;
+
+    
+
+    public Sprite[] foodSprites;
+
+    public OrderDisplayController[] orderdisplayControllers;
+
     public int orderSize;
     private float orderTimer;
     public float timeBetweenOrders;
     public int maxOrders;
+	public TextMesh[] orders;
 
     private void Start()
     {
@@ -30,6 +38,7 @@ public class OrderGeneration : MonoBehaviour {
                 AddNewOrder();
             }
         }
+        Debug.Log("current orders" + currentOrders.Count);
     }
 
     private void AddNewOrder()
@@ -40,6 +49,20 @@ public class OrderGeneration : MonoBehaviour {
         foreach (Food.FoodType foodType in newOrder)
         {
             Debug.Log(foodType);
+        }
+
+        //for (int i = 0; i < newOrder.Count; ++i)
+        //{
+        //    orders[i].text = newOrder[i].ToString();
+        //}
+
+        foreach (OrderDisplayController display in orderdisplayControllers)
+        {
+            if(display.orderDisplayed == null)
+            {
+                display.AddOrderDisplay(newOrder);
+                break;
+            }
         }
     }
 
@@ -53,6 +76,33 @@ public class OrderGeneration : MonoBehaviour {
         return order;
     }
 
+    public List<Food.FoodType> GetOrder(List<Food.FoodType> orderToCompare)
+    {
+        List<Food.FoodType> orderToReturn = null;
+        foreach (List<Food.FoodType> order in currentOrders)
+        {
+            if (OrderOutScript.CompareList(orderToCompare, order))
+            {
+                orderToReturn = order;
+                break;
+            }
+        }
+        return orderToReturn;
+    }
+
+    public void RemoveOrder(List<Food.FoodType> order)
+    {
+        currentOrders.Remove(order);
+
+        foreach (OrderDisplayController display in orderdisplayControllers)
+        {
+            if(OrderOutScript.CompareList(order, display.orderDisplayed))
+            {
+                display.ClearDisplay();
+                break;
+            }
+        }
+    }
 
 } 
 

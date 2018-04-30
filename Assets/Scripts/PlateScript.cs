@@ -29,6 +29,9 @@ public class PlateScript : MonoBehaviour {
                 Debug.Log("Adding " + other.gameObject.name + " to the hashset");
 
                 other.transform.SetParent(this.transform);
+				other.GetComponent<Rigidbody> ().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
+
 
                 // Debug.Log("Current hashset Count: " + platedSushi.Count);
             }
@@ -49,6 +52,8 @@ public class PlateScript : MonoBehaviour {
                 platedSushi.Remove(otherFood);
 
                 other.transform.SetParent(null);
+				other.GetComponent<Rigidbody> ().isKinematic = false;
+                other.GetComponent<BoxCollider>().enabled = true;
 
                 //Debug.Log("Current hashset Count: " + platedSushi.Count);
 
