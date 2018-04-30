@@ -17,14 +17,14 @@ public class Menu_Selected : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-        if(other.tag == "Sushi_Salmon")
+        if(other.tag == "Sushi_Egg")
         {
-            //play scene
+            SceneManager.LoadScene("Scene_Score_Apr23_Turner");
             Debug.Log("SushiChecker works");
         }
-        else if(other.tag == "Sushi_Egg")
+        else if(other.tag == "Sushi_Salmon")
         {
-            //quit
+            Application.Quit();
             Debug.Log("Other Checking");
         }
 	}
