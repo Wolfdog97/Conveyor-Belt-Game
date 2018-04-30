@@ -5,9 +5,11 @@ using UnityEngine;
 public class OrderOutScript : MonoBehaviour {
 
     PlateScript _plateScript;
+    public AudioManager aM;
 
     //public List<Food> sushiList = new List<Food>();
     public OrderGeneration orderGenerator;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,9 +26,20 @@ public class OrderOutScript : MonoBehaviour {
             // run CompareList()
             List<Food.FoodType> matchingOrder = orderGenerator.GetOrder(plateFoodTypes);
 
-
-            if (matchingOrder == null) Debug.Log("doesn't match an order");
-            else orderGenerator.RemoveOrder(matchingOrder);
+            // If the plate's list doesn't match one of the Orders
+            if (matchingOrder == null)
+            {
+                Debug.Log("doesn't match an order");
+                //aM.Play("");
+                Destroy(other);
+            }
+            // If the plate's list matches one of the order remove the order and get rid of plate
+            else
+            {
+                orderGenerator.RemoveOrder(matchingOrder);
+                //aM.Play("");
+                Destroy(other);
+            }
         }
     }
 
