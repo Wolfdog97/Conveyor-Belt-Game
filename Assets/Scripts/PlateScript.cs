@@ -30,6 +30,7 @@ public class PlateScript : MonoBehaviour {
 
                 other.transform.SetParent(this.transform);
 				other.GetComponent<Rigidbody> ().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
 
 
                 // Debug.Log("Current hashset Count: " + platedSushi.Count);
@@ -52,6 +53,7 @@ public class PlateScript : MonoBehaviour {
 
                 other.transform.SetParent(null);
 				other.GetComponent<Rigidbody> ().isKinematic = false;
+                other.GetComponent<BoxCollider>().enabled = true;
 
                 //Debug.Log("Current hashset Count: " + platedSushi.Count);
 
