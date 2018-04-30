@@ -10,6 +10,8 @@ TagManager:
   - Order
   - EndOfScreen
   - hand
+  - Sushi_Salmon
+  - Sushi_Egg
   layers:
   - Default
   - TransparentFX
