@@ -19,20 +19,26 @@ public class SushiScore : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
+        Debug.Log("Before: ");
+        Debug.Log(score);
+
+
         if(other.tag == "Food"){
             score -= 10f;
             Destroy(other);
+
+            Debug.Log("After: ");
             Debug.Log(score);
         }
         if(other.tag == "Plate"){
             //plate checker if statement
 
-
             score += 100f;
             Destroy(other);
+
+            Debug.Log("After: ");
             Debug.Log(score);
         }
 	}
-
 
 }
