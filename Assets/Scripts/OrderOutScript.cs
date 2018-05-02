@@ -31,14 +31,12 @@ public class OrderOutScript : MonoBehaviour {
             {
                 Debug.Log("doesn't match an order");
                 //aM.Play("");
-                Destroy(other);
             }
             // If the plate's list matches one of the order remove the order and get rid of plate
             else
             {
                 orderGenerator.RemoveOrder(matchingOrder);
                 //aM.Play("");
-                Destroy(other);
             }
         }
     }

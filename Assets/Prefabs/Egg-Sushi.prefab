@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 65194981526082930}
   m_Layer: 0
   m_Name: Egg-Sushi
-  m_TagString: Sushi_Egg
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7b610375d9b28418aaa506919a0c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodType: 0
+  foodType: 3
 --- !u!114 &114689585171345424
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -58,7 +58,7 @@ public class OrderGeneration : MonoBehaviour {
 
         foreach (OrderDisplayController display in orderdisplayControllers)
         {
-            if(display.orderDisplayed == null)
+            if (display.orderDisplayed == null)
             {
                 display.AddOrderDisplay(newOrder);
                 break;
