@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 65194981526082930}
   m_Layer: 0
   m_Name: Egg-Sushi
-  m_TagString: Untagged
+  m_TagString: Sushi_Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
