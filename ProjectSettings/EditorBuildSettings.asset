@@ -5,15 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Scene_RoomRearrangement_Eda.unity
-    guid: 00228f8b845be4962b8e50498f379b38
-  - enabled: 0
-    path: Assets/Scenes/Scene_OrderScreenTest_Eda.unity
-    guid: b2ce22fa910584613938997db5fd1dda
-  - enabled: 0
-    path: Assets/Scenes/Scene_RoomRearrengement_Apr18_Eda.unity
-    guid: c4e98e95d2d45405782f31308b501757
+
   - enabled: 1
-    path: Assets/Scenes/Scene_RoomRearrengementTest_Avery.unity
-    guid: 459a5ae51e3bba7499036b17ce1bdc45
+    path: Assets/Scenes/Scene_Menu_Turner.unity
+    guid: f3f850a97b4434d918c5660a6e61182f
+  - enabled: 1
+    path: Assets/Scenes/Scene_Score_Apr23_Turner.unity
+    guid: a64645ed83cb34b25a5813acc6fe7c42
+
