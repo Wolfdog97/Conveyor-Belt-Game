@@ -17,12 +17,12 @@ public class Menu_Selected : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-        if(other.tag == "Sushi_Egg")
+        if(other.tag == "Start")
         {
             SceneManager.LoadScene("Scene_Final_Main");
             Debug.Log("SushiChecker works");
         }
-        else if(other.tag == "Sushi_Salmon")
+        else if(other.tag == "Stop")
         {
             Application.Quit();
             Debug.Log("Other Checking");

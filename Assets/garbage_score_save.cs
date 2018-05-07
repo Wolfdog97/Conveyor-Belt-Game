@@ -30,7 +30,7 @@ public class garbage_score_save : MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider other){
-        if(other.tag == "Sushi_Salmon" || other.tag == "Sushi_Egg"){
+        if(other.tag == "Food"){
             Destroy(other);
             sushiScore.score -= 5f;
         }
