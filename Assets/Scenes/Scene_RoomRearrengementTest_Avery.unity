@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -939,6 +939,63 @@ Prefab:
     - target: {fileID: 4528668462636244, guid: f4f2b2f0dc00ecf47bbbf9ddef325588, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160552446505574, guid: a92d910c5d38acf499e17e68f22a5e89, type: 2}
+      propertyPath: m_Name
+      value: Order Generation Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: foodSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300024, guid: 5b32c2d36abe44540bed74c1f787033b,
+        type: 3}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: foodSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300008, guid: 5b32c2d36abe44540bed74c1f787033b,
+        type: 3}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: foodSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300016, guid: 5b32c2d36abe44540bed74c1f787033b,
+        type: 3}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: foodSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300024, guid: 5b32c2d36abe44540bed74c1f787033b,
+        type: 3}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: orderdisplayControllers.Array.data[2]
+      value: 
+      objectReference: {fileID: 96442203}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: orderdisplayControllers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1668108576}
+    - target: {fileID: 114293318099800352, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: orderdisplayControllers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1996696701}
+    - target: {fileID: 4776243569561572, guid: a92d910c5d38acf499e17e68f22a5e89, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 725336700
+      objectReference: {fileID: 0}
+    - target: {fileID: 212067562372290818, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212067562372290818, guid: a92d910c5d38acf499e17e68f22a5e89,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4f2b2f0dc00ecf47bbbf9ddef325588, type: 2}
