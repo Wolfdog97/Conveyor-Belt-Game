@@ -12,6 +12,7 @@ TagManager:
   - hand
   - Sushi_Salmon
   - Sushi_Egg
+  - hope
   layers:
   - Default
   - TransparentFX
