@@ -1215,7 +1215,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 39f8cf542f9d14e49855ea22d0120f50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3520,6 +3520,8 @@ MonoBehaviour:
   - {fileID: 1164244162044568, guid: a6057397f4c8944089b98e903c2f693a, type: 2}
   - {fileID: 1660897444697626, guid: 1b4f7f723c41f4d8dbce89ba7d0ebc27, type: 2}
   - {fileID: 1659270880439782, guid: 40a51dc658dcc4c08b0237d37b448df0, type: 2}
+  - {fileID: 1285988783738310, guid: ae0a28355913b457eb345e3e6c5d1715, type: 2}
+  - {fileID: 1980381276107954, guid: 6c240ec2e4b484d08a4d9c1bf3a6a795, type: 2}
   sushiSpawns:
   - {fileID: 1061326851}
   - {fileID: 1777615410}

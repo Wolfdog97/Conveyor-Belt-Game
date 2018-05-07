@@ -189,9 +189,8 @@ GameObject:
   - component: {fileID: 114876235747401906}
   - component: {fileID: 114722685160437198}
   - component: {fileID: 114669340528112776}
-  - component: {fileID: 114872978232499304}
   m_Layer: 0
-  m_Name: Sushi-Roll-Rice 1
+  m_Name: Sushi-Roll-Rice 2
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,18 +724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114872978232499304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980381276107954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f7b610375d9b28418aaa506919a0c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodType: 2
 --- !u!114 &114876235747401906
 MonoBehaviour:
   m_ObjectHideFlags: 1

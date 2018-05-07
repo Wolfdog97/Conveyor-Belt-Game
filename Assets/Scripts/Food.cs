@@ -6,10 +6,11 @@ public class Food : MonoBehaviour {
 
     public enum FoodType
     {
-        Salmon,
-        Tuna,
-        Shrimp,
-        YellowTail
+        Salmon, 
+        Egg, 
+        CucumberRoll, 
+        Crab, 
+        FishEggs
     }
 
     public FoodType foodType;
