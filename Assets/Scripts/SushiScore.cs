@@ -8,6 +8,16 @@ public class SushiScore : MonoBehaviour {
     public float score = 0f;
     public Text myText;
 
+    public GameObject myTextFile;
+
+    public GameObject employeeCanvas;
+
+    public GameObject throw_hope;
+
+    public GameObject fired;
+
+    public bool check = true;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -16,35 +26,45 @@ public class SushiScore : MonoBehaviour {
 	void Update () {
         myText.text = "$" + score.ToString();
 
-        if (score < -200f){
+        if (score < -200f)
+        {
             Debug.Log("you loose");
             //end game canvas, says you loose, Destroy(hope);
-        }
 
-	}
+            fired.SetActive(true);
 
-	private void OnTriggerEnter(Collider other)
-	{
-        Debug.Log("Before: ");
-        Debug.Log(score);
+            throw_hope.SetActive(true);
+            employeeCanvas.SetActive(false);
 
+            myTextFile.SetActive(false);
 
-        if(other.tag == "Food"){
-            score -= 10f;
-            Destroy(other);
-
-            Debug.Log("After: ");
-            Debug.Log(score);
-        }
-        if(other.tag == "Plate"){
-            //plate checker if statement
-
-            score += 100f;
-            Destroy(other);
-
-            Debug.Log("After: ");
-            Debug.Log(score);
+            check = false;
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (check)
+        {
+            if (other.tag == "Food")
+            {
+                score -= 10f;
+                Destroy(other);
+
+                Debug.Log("After: ");
+                Debug.Log(score);
+            }
+            if (other.tag == "Plate")
+            {
+                //plate checker if statement
+
+                score += 100f;
+                Destroy(other);
+
+                Debug.Log("After: ");
+                Debug.Log(score);
+            }
+        }
+    }
 
 }
