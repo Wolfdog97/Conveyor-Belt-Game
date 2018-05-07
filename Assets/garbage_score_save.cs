@@ -10,7 +10,7 @@ public class garbage_score_save : MonoBehaviour {
 
     public SushiScore sushiScore;
 
-    public int highScore;
+    public int highScore = 0;
 
     public Text myText;
 
@@ -20,7 +20,7 @@ public class garbage_score_save : MonoBehaviour {
 	void Start () {
         highScore = PlayerPrefs.GetInt("highScore", highScore);
 
-        myText.text = highScore.ToString();
+        myText.text = "$" + highScore.ToString();
 
 	}
 	
@@ -30,7 +30,7 @@ public class garbage_score_save : MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider other){
-        if(other.tag == "Sushi_Salmon" || other.tag == "Sushi_Egg"){
+        if(other.tag == "Food"){
             Destroy(other);
             sushiScore.score -= 5f;
         }
@@ -42,18 +42,19 @@ public class garbage_score_save : MonoBehaviour {
             if(sushiScore.score > highScore){
                 highScore = (int)sushiScore.score;
                 PlayerPrefs.SetInt("highScore", (int)sushiScore.score);
+                PlayerPrefs.Save();
             }
 
-            sushiScore.fired.SetActive(false);
+            //sushiScore.fired.SetActive(false);
 
-            sushiScore.throw_hope.SetActive(false);
-            sushiScore.employeeCanvas.SetActive(true);
+            //sushiScore.throw_hope.SetActive(false);
+            //sushiScore.employeeCanvas.SetActive(true);
 
-            sushiScore.myTextFile.SetActive(true);
+            //sushiScore.myTextFile.SetActive(true);
 
 
 
-            SceneManager.LoadScene("menu_scene");
+            SceneManager.LoadScene("Scene_Final_Menu");
 
             //SceneManager.LoadScene("menu_scene");
         }
