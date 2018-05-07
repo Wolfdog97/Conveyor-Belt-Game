@@ -16,11 +16,16 @@ public class OrderOutScript : MonoBehaviour {
         if(other.gameObject.tag == "Plate")
         {
             Debug.Log("This appears to be a Plate!");
-            _plateScript = other.GetComponent<PlateScript>();
+            if (other.GetComponent<PlateScript>() != null)
+            {
+                _plateScript = other.GetComponent<PlateScript>();
+            }
+           
 
            // Debug.Log("!!!!!!: " + _plateScript.platedSushi.Count);
 
             // Iterate through hashset and add each element to the list
+
             List<Food.FoodType> plateFoodTypes = ConvertHashSetToList(_plateScript.platedSushi);
 
             // run CompareList()
@@ -36,6 +41,7 @@ public class OrderOutScript : MonoBehaviour {
             else
             {
                 orderGenerator.RemoveOrder(matchingOrder);
+                Debug.Log("matching");
                 //aM.Play("");
             }
         }
@@ -43,6 +49,7 @@ public class OrderOutScript : MonoBehaviour {
 
     private List<Food.FoodType> ConvertHashSetToList(HashSet<Food> hashSet)
     {
+        print("Running hashset conversion code");
         List<Food.FoodType> foodTypeList = new List<Food.FoodType>();
 
         foreach(Food food in hashSet)
