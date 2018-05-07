@@ -19,7 +19,7 @@ public class Menu_Selected : MonoBehaviour {
 	{
         if(other.tag == "Sushi_Egg")
         {
-            SceneManager.LoadScene("Scene_Score_Apr23_Turner");
+            SceneManager.LoadScene("Scene_Final_Main");
             Debug.Log("SushiChecker works");
         }
         else if(other.tag == "Sushi_Salmon")

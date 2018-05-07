@@ -10,7 +10,7 @@ public class garbage_score_save : MonoBehaviour {
 
     public SushiScore sushiScore;
 
-    public int highScore;
+    public int highScore = 0;
 
     public Text myText;
 
@@ -20,7 +20,7 @@ public class garbage_score_save : MonoBehaviour {
 	void Start () {
         highScore = PlayerPrefs.GetInt("highScore", highScore);
 
-        myText.text = highScore.ToString();
+        myText.text = "$" + highScore.ToString();
 
 	}
 	
@@ -53,7 +53,7 @@ public class garbage_score_save : MonoBehaviour {
 
 
 
-            SceneManager.LoadScene("menu_scene");
+            SceneManager.LoadScene("Scene_Final_Menu");
 
             //SceneManager.LoadScene("menu_scene");
         }
