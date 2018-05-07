@@ -42,14 +42,15 @@ public class garbage_score_save : MonoBehaviour {
             if(sushiScore.score > highScore){
                 highScore = (int)sushiScore.score;
                 PlayerPrefs.SetInt("highScore", (int)sushiScore.score);
+                PlayerPrefs.Save();
             }
 
-            sushiScore.fired.SetActive(false);
+            //sushiScore.fired.SetActive(false);
 
-            sushiScore.throw_hope.SetActive(false);
-            sushiScore.employeeCanvas.SetActive(true);
+            //sushiScore.throw_hope.SetActive(false);
+            //sushiScore.employeeCanvas.SetActive(true);
 
-            sushiScore.myTextFile.SetActive(true);
+            //sushiScore.myTextFile.SetActive(true);
 
 
 

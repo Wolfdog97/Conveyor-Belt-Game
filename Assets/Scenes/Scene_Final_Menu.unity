@@ -160,7 +160,13 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 85
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114290653904832668, guid: f20495f467f984049bf6d52508220d96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114290653904832668, guid: f20495f467f984049bf6d52508220d96, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f20495f467f984049bf6d52508220d96, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &55680789 stripped
@@ -1263,6 +1269,7 @@ GameObject:
   - component: {fileID: 679834417}
   - component: {fileID: 679834416}
   - component: {fileID: 679834415}
+  - component: {fileID: 679834418}
   m_Layer: 0
   m_Name: MoneyScreen (1)
   m_TagString: Untagged
@@ -1325,6 +1332,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &679834418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679834414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8ee866bfab241f9b35e0a4e526f589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sushiScore: {fileID: 2089695695}
+  highScore: 0
+  myText: {fileID: 720747974}
 --- !u!1 &720747972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3109,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4895289638110358, guid: 506021d12a2584f1d8e679b097581815, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.21
+      value: 4.34
       objectReference: {fileID: 0}
     - target: {fileID: 4895289638110358, guid: 506021d12a2584f1d8e679b097581815, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3137,6 +3158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5f6263b59a342b283ca8fe1ac4a3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2089695695 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114658938353010548, guid: 506021d12a2584f1d8e679b097581815,
+    type: 2}
+  m_PrefabInternal: {fileID: 2089695692}
+  m_Script: {fileID: 11500000, guid: c29b93e9b5b70474a846173b82a17a0a, type: 3}
 --- !u!1 &2098386641
 GameObject:
   m_ObjectHideFlags: 0

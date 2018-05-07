@@ -2080,7 +2080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sushiScore: {fileID: 2089695693}
   highScore: 0
-  myText: {fileID: 413317150}
+  myText: {fileID: 1562691648}
 --- !u!1 &1155852397
 GameObject:
   m_ObjectHideFlags: 0
