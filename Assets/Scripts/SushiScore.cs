@@ -15,6 +15,12 @@ public class SushiScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         myText.text = "$" + score.ToString();
+
+        if (score < -200f){
+            Debug.Log("you loose");
+            //end game canvas, says you loose, Destroy(hope);
+        }
+
 	}
 
 	private void OnTriggerEnter(Collider other)
