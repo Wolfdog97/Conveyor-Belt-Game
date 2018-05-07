@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using UnityEngine.UI;
 
 
 public class garbage_score_save : MonoBehaviour {
 
     public SushiScore sushiScore;
+
+    public int highScore;
+
     public Text myText;
 
-    public List<float> myfloats = new List<float>{};
+    //public List<float> myfloats = new List<float>{};
 
 	// Use this for initialization
 	void Start () {
-		
+        highScore = PlayerPrefs.GetInt("highScore", highScore);
+
+        myText.text = highScore.ToString();
+
 	}
 	
 	// Update is called once per frame
@@ -30,23 +37,24 @@ public class garbage_score_save : MonoBehaviour {
         if(other.tag == "hope"){
             Destroy(other);
 
-            //float doggy_dog_world = sushiScore.score;
-            //float doggy_dog_world2;
+            sushiScore.check = true;
 
-            //for (int i = 0; i <= myfloats.Length; i++){
-            //    if(myfloats[i] < doggy_dog_world){
-            //        doggy_dog_world2 = myfloats[i];
-            //        myfloats[i] = doggy_dog_world;
-            //        doggy_dog_world = doggy_dog_world2;
-            //    }
-            //}
+            if(sushiScore.score > highScore){
+                highScore = (int)sushiScore.score;
+                PlayerPrefs.SetInt("highScore", (int)sushiScore.score);
+            }
 
-            //myfloats.Add(doggy_dog_world);
+            sushiScore.fired.SetActive(false);
 
-            myfloats.Add(sushiScore.score);
-            List<float> Sort_Scores = myfloats.OrderBy(x => x).ToList();
+            sushiScore.throw_hope.SetActive(false);
+            sushiScore.employeeCanvas.SetActive(true);
 
-            myText = myText + "\n$" + (string)sushiScore.score; //myText will later become highscore manager
+            sushiScore.myTextFile.SetActive(true);
+
+
+
+            SceneManager.LoadScene("menu_scene");
+
             //SceneManager.LoadScene("menu_scene");
         }
     }
