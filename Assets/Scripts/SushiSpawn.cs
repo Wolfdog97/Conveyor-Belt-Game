@@ -23,12 +23,12 @@ public class SushiSpawn : MonoBehaviour
     //public Transform spawn4;
     //public Transform spawn5;
 
-    public float timeCount;
+    public float timeCount = 2f;
     public float timeAccel;
 
 	// Use this for initialization
     void Start () {
-        timeCount = 2f;
+        
     }
 	
 	// Update is called once per frame
@@ -37,6 +37,9 @@ public class SushiSpawn : MonoBehaviour
         timeCount -= Time.deltaTime;
         //timeAccel = Mathf.Log(timeCount);
 
+        if(timeAccel < 1.5f){
+            timeAccel += (Time.deltaTime) / (60f);
+        }
 
         if(timeCount <= 0f){
 
@@ -55,7 +58,7 @@ public class SushiSpawn : MonoBehaviour
                 Instantiate(randSushi, mySpawn.position, Quaternion.identity);
           //  }
 
-            timeCount = 2f;
+            timeCount = 2f - timeAccel;
         }
 
 	}
