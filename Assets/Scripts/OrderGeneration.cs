@@ -5,7 +5,7 @@ using UnityEngine;
 public class OrderGeneration : MonoBehaviour {
 
     ShuffleBag<Food.FoodType> randomBag = 
-        new ShuffleBag<Food.FoodType>(new Food.FoodType[]{Food.FoodType.Salmon, Food.FoodType.Shrimp, Food.FoodType.Tuna, Food.FoodType.YellowTail});
+        new ShuffleBag<Food.FoodType>(new Food.FoodType[]{Food.FoodType.Salmon, Food.FoodType.Egg, Food.FoodType.CucumberRoll, Food.FoodType.Crab, Food.FoodType.FishEggs});
 
     public List<List<Food.FoodType>> currentOrders;
 

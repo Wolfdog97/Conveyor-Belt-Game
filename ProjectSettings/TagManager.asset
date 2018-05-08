@@ -13,6 +13,8 @@ TagManager:
   - Sushi_Salmon
   - Sushi_Egg
   - hope
+  - Start
+  - Stop
   layers:
   - Default
   - TransparentFX

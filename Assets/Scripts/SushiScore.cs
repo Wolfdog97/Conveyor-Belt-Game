@@ -6,45 +6,68 @@ using UnityEngine.UI;
 public class SushiScore : MonoBehaviour {
     
     public float score = 0f;
+
     public Text myText;
+
+    public GameObject myTextFile;
+
+    public GameObject employeeCanvas;
+
+    public GameObject throw_hope;
+
+    public GameObject fired;
+
+    public bool check = true;
 
 	// Use this for initialization
 	void Start () {
+
+        myTextFile.SetActive(true);
+
+        employeeCanvas.SetActive(true);
+
+        throw_hope.SetActive(false);
+
+        fired.SetActive(false);
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
         myText.text = "$" + score.ToString();
 
-        if (score < -200f){
+        if (score < -200f)
+        {
             Debug.Log("you loose");
             //end game canvas, says you loose, Destroy(hope);
-        }
 
-	}
+            employeeCanvas.SetActive(false);
 
-	private void OnTriggerEnter(Collider other)
-	{
-        Debug.Log("Before: ");
-        Debug.Log(score);
+            myTextFile.SetActive(false);
 
 
-        if(other.tag == "Food"){
-            score -= 10f;
-            Destroy(other);
+            fired.SetActive(true);
 
-            Debug.Log("After: ");
-            Debug.Log(score);
-        }
-        if(other.tag == "Plate"){
-            //plate checker if statement
+            throw_hope.SetActive(true);
 
-            score += 100f;
-            Destroy(other);
-
-            Debug.Log("After: ");
-            Debug.Log(score);
+            check = false;
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (check)
+        {
+            if (other.tag == "Food")
+            {
+                score -= 10f;
+                Destroy(other);
+
+                Debug.Log("After: ");
+                Debug.Log(score);
+            }
+        }
+    }
 
 }

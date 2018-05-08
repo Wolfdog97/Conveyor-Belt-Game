@@ -7,6 +7,8 @@ public class OrderOutScript : MonoBehaviour {
     PlateScript _plateScript;
     public AudioManager aM;
 
+    public SushiScore myScore;
+
     //public List<Food> sushiList = new List<Food>();
     public OrderGeneration orderGenerator;
 
@@ -36,6 +38,9 @@ public class OrderOutScript : MonoBehaviour {
             {
                 Debug.Log("doesn't match an order");
                 //aM.Play("");
+
+                myScore.score -= 50f;
+
             }
             // If the plate's list matches one of the order remove the order and get rid of plate
             else
@@ -43,6 +48,9 @@ public class OrderOutScript : MonoBehaviour {
                 orderGenerator.RemoveOrder(matchingOrder);
                 Debug.Log("matching");
                 //aM.Play("");
+
+                myScore.score += 100f;
+
             }
         }
     }
