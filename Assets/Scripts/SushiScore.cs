@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SushiScore : MonoBehaviour {
     
     public float score = 0f;
+
     public Text myText;
 
     public GameObject myTextFile;
@@ -20,7 +21,17 @@ public class SushiScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        myTextFile.SetActive(true);
+
+        employeeCanvas.SetActive(true);
+
+        throw_hope.SetActive(false);
+
+        fired.SetActive(false);
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,12 +42,14 @@ public class SushiScore : MonoBehaviour {
             Debug.Log("you loose");
             //end game canvas, says you loose, Destroy(hope);
 
-            fired.SetActive(true);
-
-            throw_hope.SetActive(true);
             employeeCanvas.SetActive(false);
 
             myTextFile.SetActive(false);
+
+
+            fired.SetActive(true);
+
+            throw_hope.SetActive(true);
 
             check = false;
         }
@@ -49,16 +62,6 @@ public class SushiScore : MonoBehaviour {
             if (other.tag == "Food")
             {
                 score -= 10f;
-                Destroy(other);
-
-                Debug.Log("After: ");
-                Debug.Log(score);
-            }
-            if (other.tag == "Plate")
-            {
-                //plate checker if statement
-
-                score += 100f;
                 Destroy(other);
 
                 Debug.Log("After: ");
