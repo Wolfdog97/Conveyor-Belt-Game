@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,7 +19,7 @@ public class Menu_Selected : MonoBehaviour {
 	{
         if(other.tag == "Start")
         {
-            SceneManager.LoadScene("Scene_Final_Main");
+            SceneManager.LoadScene(1);
             Debug.Log("SushiChecker works");
         }
         else if(other.tag == "Stop")
