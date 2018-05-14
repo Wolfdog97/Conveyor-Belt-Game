@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -54,9 +54,13 @@ public class garbage_score_save : MonoBehaviour {
 
 
 
-            SceneManager.LoadScene("Scene_Final_Menu");
+            SceneManager.LoadScene(0);
 
             //SceneManager.LoadScene("menu_scene");
+        }
+        else
+        {
+            Destroy(other);
         }
     }
 
