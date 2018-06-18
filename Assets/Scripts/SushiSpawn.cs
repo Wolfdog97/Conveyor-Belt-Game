@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,14 +23,9 @@ public class SushiSpawn : MonoBehaviour
     //public Transform spawn4;
     //public Transform spawn5;
 
-    public float timeCount = 2f;
+    public float timeCount = 4f;
     public float timeAccel;
 
-	// Use this for initialization
-    void Start () {
-        
-    }
-	
 	// Update is called once per frame
 	void Update () {
 
@@ -53,9 +48,9 @@ public class SushiSpawn : MonoBehaviour
                 //GameObject myObj = Objector();
 
                 GameObject randSushi = sushiPrefabs[Random.Range(0, sushiPrefabs.Length)];
-                Transform mySpawn = sushiSpawns[Random.Range(0, sushiSpawns.Length)];
+                //Transform mySpawn = sushiSpawns[Random.Range(0, sushiSpawns.Length)];
 
-                Instantiate(randSushi, mySpawn.position, Quaternion.identity);
+                Instantiate(randSushi, transform.position, Quaternion.identity);
           //  }
 
             timeCount = 2f - timeAccel;

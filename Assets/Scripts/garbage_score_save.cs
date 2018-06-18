@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class garbage_score_save : MonoBehaviour {
@@ -12,7 +13,7 @@ public class garbage_score_save : MonoBehaviour {
 
     public int highScore = 0;
 
-    public Text myText;
+    public TextMeshPro myText;
 
     //public List<float> myfloats = new List<float>{};
 
@@ -31,11 +32,11 @@ public class garbage_score_save : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other){
         if(other.tag == "Food"){
-            Destroy(other);
-            sushiScore.score -= 5f;
+            Destroy(other.gameObject);
+            //sushiScore.score -= 5f;
         }
         if(other.tag == "hope"){
-            Destroy(other);
+           
 
             sushiScore.check = true;
 
@@ -56,11 +57,13 @@ public class garbage_score_save : MonoBehaviour {
 
             SceneManager.LoadScene(0);
 
+            Destroy(other.gameObject);
+
             //SceneManager.LoadScene("menu_scene");
         }
         else
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 

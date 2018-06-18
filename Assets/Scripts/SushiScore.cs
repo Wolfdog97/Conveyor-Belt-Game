@@ -1,13 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SushiScore : MonoBehaviour {
     
     public float score = 0f;
 
-    public Text myText;
+    public TextMeshPro myText;
 
     public GameObject myTextFile;
 
@@ -35,7 +36,16 @@ public class SushiScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        myText.text = "$" + score.ToString();
+        myText.text = "$ " + score.ToString();
+
+        if(score <= -1)
+        {
+            myText.color = new Color(255, 0, 0);
+        }
+        else
+        {
+            myText.color = new Color(0, 255, 0);
+        }
 
         if (score < -200f)
         {
@@ -45,7 +55,6 @@ public class SushiScore : MonoBehaviour {
             employeeCanvas.SetActive(false);
 
             myTextFile.SetActive(false);
-
 
             fired.SetActive(true);
 
@@ -57,17 +66,20 @@ public class SushiScore : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (check)
+        if (other.tag == "Food")
         {
-            if (other.tag == "Food")
+            if (check)
             {
                 score -= 10f;
-                Destroy(other);
-
-                Debug.Log("After: ");
-                Debug.Log(score);
             }
+                Destroy(other.gameObject);
         }
+
+        if(other.tag == "Plate")
+        {
+            Destroy(other.gameObject);
+        }
+ 
     }
 
 }

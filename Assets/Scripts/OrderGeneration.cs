@@ -9,8 +9,6 @@ public class OrderGeneration : MonoBehaviour {
 
     public List<List<Food.FoodType>> currentOrders;
 
-    
-
     public Sprite[] foodSprites;
 
     public OrderDisplayController[] orderdisplayControllers;
@@ -36,6 +34,8 @@ public class OrderGeneration : MonoBehaviour {
             {
                 orderTimer = 0;
                 AddNewOrder();
+
+                //aM.Play("Order Up");
             }
         }
         Debug.Log("current orders" + currentOrders.Count);
