@@ -5,7 +5,6 @@ using UnityEngine;
 public class OrderOutScript : MonoBehaviour {
 
     PlateScript _plateScript;
-    public AudioManager aM;
 
     public SushiScore myScore;
 
@@ -40,7 +39,6 @@ public class OrderOutScript : MonoBehaviour {
                 //aM.Play("");
 
                 myScore.score -= 50f;
-
             }
             // If the plate's list matches one of the order remove the order and get rid of plate
             else
@@ -57,7 +55,7 @@ public class OrderOutScript : MonoBehaviour {
 
     private List<Food.FoodType> ConvertHashSetToList(HashSet<Food> hashSet)
     {
-        print("Running hashset conversion code");
+        //print("Running hashset conversion code");
         List<Food.FoodType> foodTypeList = new List<Food.FoodType>();
 
         foreach(Food food in hashSet)

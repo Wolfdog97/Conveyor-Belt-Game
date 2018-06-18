@@ -7,6 +7,7 @@ public class OrderDisplayController : MonoBehaviour {
     [SerializeField]
     OrderGeneration OrderGeneration;
     public List<Food.FoodType> orderDisplayed;
+
     private SpriteRenderer[] sprites;
 
     // Use this for initialization
@@ -15,10 +16,6 @@ public class OrderDisplayController : MonoBehaviour {
         sprites = GetComponentsInChildren<SpriteRenderer>();
         orderDisplayed = null;
     }
-	
-	
-	void Update () {
-	}
 
    public void AddOrderDisplay(List<Food.FoodType> order)
     {

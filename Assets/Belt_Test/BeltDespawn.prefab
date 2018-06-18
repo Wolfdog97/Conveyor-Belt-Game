@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277652629835670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.21, y: -1.0980949, z: 0.67999995}
+  m_LocalPosition: {x: 3.67, y: -1.0980949, z: 0.67999995}
   m_LocalScale: {x: 1, y: 1, z: 0.9999978}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,8 +51,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9699209, y: 0.43028855, z: 1.0004377}
-  m_Center: {x: 0.012227178, y: 0.086916804, z: -0.00021886826}
+  m_Size: {x: 0.18346953, y: 0.43028855, z: 1.0004377}
+  m_Center: {x: -0.8809985, y: 0.086916804, z: -0.00021886197}
 --- !u!114 &114658938353010548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,3 +66,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   myText: {fileID: 0}
+  myTextFile: {fileID: 0}
+  employeeCanvas: {fileID: 0}
+  throw_hope: {fileID: 0}
+  fired: {fileID: 0}
+  check: 1
